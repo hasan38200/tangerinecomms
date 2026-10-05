@@ -14,9 +14,6 @@
     --header-pad: 48px;
 }
 
-/* ============================
-   3. BODY
-   ============================ */
 body {
     font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
     background: var(--bg);
@@ -33,7 +30,7 @@ svg {
 }
 
 /* ============================
-   4. HEADER
+   HEADER
    ============================ */
 .site-header {
     position: sticky;
@@ -289,7 +286,7 @@ svg {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 5px;
     flex-shrink: 0;
     transition: transform 0.3s ease;
 }
@@ -300,14 +297,14 @@ svg {
 
 .menu-toggle span {
     display: block;
-    width: 24px;
-    height: 3px;
+    width: 22px;
+    height: 2.5px;
     border-radius: 3px;
     background: #fff;
 }
 
 /* ============================
-   5. MOBILE MENU
+   MOBILE MENU
    ============================ */
 .mobile-menu {
     position: fixed;
@@ -371,6 +368,12 @@ body.menu-open {
     opacity: 0;
     transform: translateX(32px);
     transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.45s;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.mm-panel::-webkit-scrollbar {
+    display: none;
 }
 
 .mobile-menu.is-open .mm-panel.is-active {
@@ -443,7 +446,7 @@ body.menu-open {
 }
 
 /* ============================
-   6. PR HERO
+   PR HERO
    ============================ */
 .pr-hero {
     width: 100%;
@@ -465,7 +468,7 @@ body.menu-open {
 }
 
 /* ============================
-   7. PR INTRO (SCROLL REVEAL)
+   PR INTRO (SCROLL REVEAL)
    ============================ */
 .pr-intro {
     background-color: #ffffff;
@@ -516,6 +519,14 @@ body.menu-open {
     margin-top: 50px;
     margin-bottom: 30px;
     font-weight: 400;
+}
+
+.pr-intro-right p+p {
+    margin-top: 28px;
+}
+
+.pr-intro-right p:first-child {
+    margin-top: 50px;
 }
 
 .pr-intro-right p span:where(:nth-child(62)) {
@@ -570,7 +581,7 @@ body.menu-open {
 }
 
 /* ============================
-   8. PR MOMENTS (SCROLL REVEAL)
+   PR MOMENTS
    ============================ */
 .pr-moments-inner {
     max-width: 1400px;
@@ -639,8 +650,7 @@ body.menu-open {
 }
 
 /* ============================
-   9. PR RECENT WORK — INFINITE SCROLLING CARDS
-   (no hover pause, no lift, no zoom — pure smooth marquee)
+   RECENT WORK CARDS
    ============================ */
 .recent-work-cards {
     padding: 40px 0;
@@ -653,7 +663,6 @@ body.menu-open {
     align-items: center;
     gap: 24px;
     width: max-content;
-    /* Medium speed: 55s for a full loop */
     animation: recentCardsScroll 15s linear infinite;
     will-change: transform;
 }
@@ -668,7 +677,6 @@ body.menu-open {
     }
 }
 
-/* --- CARD BASE (no hover transform) --- */
 .recent-card {
     flex-shrink: 0;
     display: block;
@@ -682,7 +690,6 @@ body.menu-open {
     position: relative;
 }
 
-/* Image inside cards — no hover zoom, no transition */
 .recent-card img {
     width: 100%;
     height: 100%;
@@ -690,7 +697,6 @@ body.menu-open {
     display: block;
 }
 
-/* --- Specsavers social card --- */
 .recent-card.card-specsavers {
     background: #d6e5d0;
     padding: 20px;
@@ -775,7 +781,6 @@ body.menu-open {
     margin-top: 4px;
 }
 
-/* --- Red typography card --- */
 .recent-card.card-red {
     background: #e84a3b;
     display: flex;
@@ -802,7 +807,6 @@ body.menu-open {
     margin: 0;
 }
 
-/* --- Pink Peldon Rose card --- */
 .recent-card.card-pink {
     background: #f2a3a3;
     padding: 16px;
@@ -817,7 +821,7 @@ body.menu-open {
 }
 
 /* ============================
-   10. WORK GRID (4 staggered images + View All Work)
+   WORK GRID
    ============================ */
 .work-grid {
     padding: 48px 25px;
@@ -910,7 +914,6 @@ body.menu-open {
     transform: scale(1.04);
 }
 
-/* ---- Hover overlay with scrolling "View Project" marquee ---- */
 .work-overlay {
     position: absolute;
     inset: 0;
@@ -999,7 +1002,7 @@ body.menu-open {
 }
 
 /* ============================
-   11. AWARDS — Recent Award Wins (expanding card + logo marquee)
+   AWARDS
    ============================ */
 .awards {
     padding: 40px 48px 120px;
@@ -1250,7 +1253,7 @@ body.menu-open {
 }
 
 /* ============================
-   12. TESTIMONIAL
+   TESTIMONIAL
    ============================ */
 .testimonial {
     padding: 100px 48px 120px;
@@ -1287,8 +1290,8 @@ body.menu-open {
 }
 
 .testimonial-arrow {
-    width: 76px;
-    height: 76px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     background: var(--ink);
     color: #fff;
@@ -1375,7 +1378,7 @@ body.menu-open {
 }
 
 /* ============================
-   13. FOOTER
+   FOOTER
    ============================ */
 .site-footer {
     padding: 0 28px 28px;
@@ -1526,7 +1529,7 @@ body.menu-open {
 }
 
 /* ============================
-   14. RESPONSIVE
+   RESPONSIVE
    ============================ */
 @media (min-width: 1025px) {
 
@@ -1629,6 +1632,10 @@ body.menu-open {
         font-size: clamp(2rem, 8vw, 2.5rem);
     }
 
+    .pr-intro-right p:first-child {
+        margin-top: 0;
+    }
+
     .pr-moments-inner {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1725,11 +1732,6 @@ body.menu-open {
         max-width: none;
     }
 
-    .testimonial-arrow {
-        width: 56px;
-        height: 56px;
-    }
-
     .testimonial-quote {
         font-size: 1.35rem;
     }
@@ -1776,12 +1778,12 @@ body.menu-open {
     .menu-toggle {
         width: 48px;
         height: 48px;
-        gap: 6px;
+        gap: 4px;
     }
 
     .menu-toggle span {
         width: 20px;
-        height: 2.5px;
+        height: 2px;
     }
 
     .mm-close {
@@ -1869,11 +1871,6 @@ body.menu-open {
         font-size: 1.15rem;
     }
 
-    .testimonial-arrow {
-        width: 48px;
-        height: 48px;
-    }
-
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 28px 16px;
@@ -1891,27 +1888,556 @@ body.menu-open {
     }
 }
 
-/* ---- mobile menu: never show a scrollbar ---- */
-.mm-panel {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+/* ==========================================================
+   B2B PAGE SPECIFIC
+   ========================================================== */
+
+/* ---- Hero video ---- */
+.b2b-hero {
+    padding: 24px 48px 0;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
-.mm-panel::-webkit-scrollbar {
+.b2b-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 78vh;
+    border-radius: 24px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #cfe2ff, #a9c9ff);
+}
+
+.b2b-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mute-toggle {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.mute-toggle:hover {
+    transform: scale(1.08);
+    background: #222;
+}
+
+.mute-toggle .mute-wave {
     display: none;
 }
 
-/* ---- three-line hamburger ---- */
-.menu-toggle {
-    gap: 5px;
+.mute-toggle.is-on .mute-wave {
+    display: inline;
 }
 
-.menu-toggle span {
+.mute-toggle.is-on .mute-x {
+    display: none;
+}
+
+/* ==========================================================
+   CRISIS LAB — full animated section
+   ========================================================== */
+
+.crisis {
+    padding: 40px 48px 100px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.crisis-inner {
+    background: #f5f2ec;
+    border-radius: 32px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 0.95fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* ---------- Red visual block (wipe-in + logo + animations) ---------- */
+.crisis-visual {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #e4180f;
+    isolation: isolate;
+    /* whole block wipes up from bottom */
+    clip-path: inset(100% 0 0 0 round 24px);
+    transition: clip-path 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.crisis.in-view .crisis-visual,
+.crisis.has-played .crisis-visual {
+    clip-path: inset(0 0 0 0 round 24px);
+}
+
+/* Blobs (animated glow) */
+.cv-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    will-change: transform;
+    z-index: 1;
+}
+
+.cv-blob-1 {
+    width: 70%;
+    height: 55%;
+    top: -10%;
+    left: -10%;
+    background: #ff2a1a;
+    animation: cvDrift1 9s ease-in-out infinite alternate;
+}
+
+.cv-blob-2 {
+    width: 60%;
+    height: 50%;
+    top: 30%;
+    right: -15%;
+    background: #b80a05;
+    animation: cvDrift2 11s ease-in-out infinite alternate;
+}
+
+.cv-blob-3 {
+    width: 75%;
+    height: 55%;
+    bottom: -20%;
+    left: 5%;
+    background: #ff6a4d;
+    animation: cvDrift3 13s ease-in-out infinite alternate;
+}
+
+.cv-glow {
+    position: absolute;
+    right: -25%;
+    bottom: -20%;
+    width: 90%;
+    height: 70%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 65%);
+    animation: cvGlow 6s ease-in-out infinite alternate;
+    z-index: 2;
+}
+
+@keyframes cvDrift1 {
+    to {
+        transform: translate(40%, 30%) scale(1.25);
+    }
+}
+
+@keyframes cvDrift2 {
+    to {
+        transform: translate(-45%, 25%) scale(0.85);
+    }
+}
+
+@keyframes cvDrift3 {
+    to {
+        transform: translate(35%, -35%) scale(1.15);
+    }
+}
+
+@keyframes cvGlow {
+    from {
+        opacity: 0.5;
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-12%, -10%) scale(1.15);
+    }
+}
+
+/* ---- The Crisis Lab logo (centre of the red block) ---- */
+.cv-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 6;
+    opacity: 0;
+    transform: translate(-50%, -40%);
+    transition: opacity 1.1s ease 0.9s, transform 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.9s;
+}
+
+.crisis.in-view .cv-logo,
+.crisis.has-played .cv-logo {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+/* Left “avatar cluster” dots */
+.cv-logo-mark {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 22px);
+    grid-template-rows: repeat(3, 22px);
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.cv-logo-mark i {
+    display: block;
     width: 22px;
-    height: 2.5px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    animation: cvLogoPulse 2.6s ease-in-out infinite;
 }
 
-@media (max-width: 600px) {
-    .menu-toggle { gap: 4px; }
-    .menu-toggle span { width: 20px; height: 2px; }
+.cv-logo-mark i:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.cv-logo-mark i:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.cv-logo-mark i:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.cv-logo-mark i:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.cv-logo-mark i:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.cv-logo-mark i:nth-child(6) {
+    animation-delay: 1s;
+}
+
+@keyframes cvLogoPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.85;
+        transform: scale(0.92);
+    }
+}
+
+/* Right text */
+.cv-logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    color: #fff;
+    text-align: left;
+}
+
+/* ---- Ripple rings ---- */
+.cv-ring {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 32%;
+    aspect-ratio: 1;
+    border: 1.5px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0;
+    animation: cvRipple 4.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    z-index: 3;
+}
+
+.cv-ring-2 {
+    animation-delay: 1.5s;
+}
+
+.cv-ring-3 {
+    animation-delay: 3s;
+}
+
+@keyframes cvRipple {
+    0% {
+        transform: translate(-50%, -50%) scale(0.4);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
+
+/* ---- Centre dots ---- */
+.cv-dots {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 14px;
+    z-index: 3;
+    opacity: 0.4;
+}
+
+.cv-dots span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(120, 0, 0, 0.35);
+    animation: cvBounce 1.3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.cv-dots span:nth-child(2) {
+    animation-delay: 0.16s;
+}
+
+.cv-dots span:nth-child(3) {
+    animation-delay: 0.32s;
+}
+
+@keyframes cvBounce {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    30% {
+        transform: translateY(-16px) scale(1.15);
+    }
+}
+
+/* ---- Floating chips ---- */
+.cv-chip {
+    position: absolute;
+    z-index: 7;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    box-shadow: 0 10px 30px rgba(90, 0, 0, 0.25);
+    opacity: 0;
+    animation: cvChip 9s ease-in-out infinite;
+}
+
+.cv-chip i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e4180f;
+    flex-shrink: 0;
+}
+
+.cv-chip-1 {
+    top: 14%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.cv-chip-2 {
+    top: 26%;
+    right: 6%;
+    animation-delay: 2.25s;
+}
+
+.cv-chip-3 {
+    bottom: 26%;
+    left: 7%;
+    animation-delay: 4.5s;
+}
+
+.cv-chip-4 {
+    bottom: 14%;
+    right: 8%;
+    animation-delay: 6.75s;
+}
+
+@keyframes cvChip {
+    0% {
+        opacity: 0;
+        transform: translateY(24px) scale(0.9);
+    }
+
+    8% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    26% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1);
+    }
+
+    34% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+}
+
+/* ---- Right side copy (text) ---- */
+.crisis-tag,
+.pr-tag.crisis-tag {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}
+
+.crisis-title {
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    margin-bottom: 28px;
+}
+
+.crisis-title span[style*="--d"] {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+        transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition-delay: calc(0.6s + var(--d) * 0.05s);
+}
+
+.crisis.in-view .crisis-title span[style*="--d"],
+.crisis.has-played .crisis-title span[style*="--d"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.crisis-copy p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #333;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.crisis.in-view .crisis-copy p,
+.crisis.has-played .crisis-copy p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.crisis.in-view .crisis-copy p:nth-of-type(1),
+.crisis.has-played .crisis-copy p:nth-of-type(1) {
+    transition-delay: 1s;
+}
+
+.crisis.in-view .crisis-copy p:nth-of-type(2),
+.crisis.has-played .crisis-copy p:nth-of-type(2) {
+    transition-delay: 1.15s;
+}
+
+.crisis.in-view .crisis-copy p:nth-of-type(3),
+.crisis.has-played .crisis-copy p:nth-of-type(3) {
+    transition-delay: 1.3s;
+}
+
+.crisis.in-view .crisis-copy p:nth-of-type(4),
+.crisis.has-played .crisis-copy p:nth-of-type(4) {
+    transition-delay: 1.45s;
+}
+
+.crisis-cta {
+    margin-top: 10px;
+    padding: 18px 28px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.7s ease 1.6s,
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.6s;
+}
+
+.crisis.in-view .crisis-cta,
+.crisis.has-played .crisis-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .b2b-hero {
+        padding: 16px 20px 0;
+    }
+
+    .b2b-video {
+        border-radius: 16px;
+        aspect-ratio: 4 / 3;
+    }
+
+    .mute-toggle {
+        width: 44px;
+        height: 44px;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .crisis {
+        padding: 20px 20px 60px;
+    }
+
+    .crisis-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+    .crisis-visual {
+        aspect-ratio: 1 / 1;
+    }
+
+    .cv-chip {
+        font-size: 0.68rem;
+        padding: 7px 12px;
+    }
+
+    .cv-logo-text {
+        font-size: 1.4rem;
+    }
 }

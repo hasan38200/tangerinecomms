@@ -447,7 +447,7 @@ body.menu-open {
    ============================ */
 .pr-hero {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     overflow: hidden;
     position: relative;
 }
@@ -1890,6 +1890,79 @@ body.menu-open {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================
+   SOCIAL PAGE ADDITIONS
+   ============================ */
+.pr-moments-right p + p,
+.pr-intro-right p + p {
+    margin-top: 28px;
+}
+
+.pr-intro-right p:first-child {
+    margin-top: 50px;
+}
+
+/* ---- Proud partners with ---- */
+.sm-partners {
+    padding: 80px 48px 140px;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sm-partners-title {
+    font-size: clamp(1.25rem, 2vw, 1.6rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sm-partners-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.partner-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 280px;
+    height: 140px;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tile-meta { background: #0a0a5c; }
+.tile-tiktok { background: #000; }
+
+.sm-partners.in-view .sm-partners-title,
+.sm-partners.in-view .partner-tile {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sm-partners.in-view .tile-meta { transition-delay: 0.15s; }
+.sm-partners.in-view .tile-tiktok { transition-delay: 0.3s; }
+
+@media (max-width: 900px) {
+    .sm-partners { padding: 48px 20px 80px; }
+    .partner-tile { width: 100%; max-width: 320px; height: 110px; font-size: 1.6rem; }
+    .pr-intro-right p:first-child { margin-top: 0; }
+}
+
 
 /* ---- mobile menu: never show a scrollbar ---- */
 .mm-panel {

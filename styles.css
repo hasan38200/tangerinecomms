@@ -2300,12 +2300,12 @@ body.menu-open {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 8px 0;
+  padding: 6px 0;
   background: none;
   border: 0;
   color: #fff;
   font-family: inherit;
-  font-size: clamp(1.9rem, 9vw, 3rem);
+  font-size: clamp(1.4rem, min(7vw, 5vh), 2.4rem);
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.15;
@@ -3347,7 +3347,7 @@ body.menu-open {
   }
 
   .mm-link {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
   }
 
   .footer-grid {
@@ -3494,4 +3494,29 @@ body.menu-open {
   .hero-copy {
     padding-bottom: 8%;
   }
+}
+
+/* ---- mobile menu: never show a scrollbar ---- */
+.mm-panel {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.mm-panel::-webkit-scrollbar {
+    display: none;
+}
+
+/* ---- three-line hamburger ---- */
+.menu-toggle {
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 22px;
+    height: 2.5px;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle { gap: 4px; }
+    .menu-toggle span { width: 20px; height: 2px; }
 }
