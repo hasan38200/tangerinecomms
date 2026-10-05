@@ -38,7 +38,7 @@
               <div class="mega-inner">
                 <h2 class="mega-title">What We Do</h2>
                 <ul class="mega-list">
-                  <li><a href="#" class="mega-link"><span>PR</span></a></li>
+                  <li><a href="pr.html" class="mega-link" style="border-top: 2px solid var(--divider);"><span>PR</span></a></li>
                   <li><a href="#" class="mega-link"><span>Social Media</span></a></li>
                 </ul>
               </div>
@@ -56,9 +56,8 @@
               <div class="mega-inner">
                 <h2 class="mega-title">Who We Help</h2>
                 <ul class="mega-list">
-                  <li><a href="#" class="mega-link"><span>Consumer Brands</span></a></li>
-                  <li><a href="#" class="mega-link"><span>B2B</span></a></li>
-                  <li><a href="#" class="mega-link"><span>Corporate</span></a></li>
+                  <li><a href="#" class="mega-link" style="border-top: 2px solid var(--divider);"><span>B2B</span></a></li>
+                  <li><a href="#" class="mega-link"><span>Ecommerce</span></a></li>
                 </ul>
               </div>
             </div>
@@ -79,10 +78,14 @@
               <div class="mega-inner">
                 <h2 class="mega-title">How We Do It</h2>
                 <ul class="mega-list">
-                  <li><a href="#" class="mega-link"><span>Attention</span></a></li>
-                  <li><a href="#" class="mega-link"><span>Strategy</span></a></li>
+                  <li><a href="#" class="mega-link" style="border-top: 2px solid var(--divider);"><span>Strategy</span></a></li>
                   <li><a href="#" class="mega-link"><span>Creative</span></a></li>
-                  <li><a href="#" class="mega-link"><span>Insight</span></a></li>
+                  <li><a href="#" class="mega-link"><span>Studio</span></a></li>
+                  <li><a href="#" class="mega-link"><span>Media</span></a></li>
+                  <li><a href="#" class="mega-link"><span>Digital</span></a></li>
+                  <li><a href="#" class="mega-link"><span>Communities</span></a></li>
+                  <li><a href="#" class="mega-link"><span>Innovation</span></a></li>
+                  <li><a href="#" class="mega-link"><span>Influencer</span></a></li>
                 </ul>
               </div>
             </div>
@@ -99,7 +102,7 @@
               <div class="mega-inner">
                 <h2 class="mega-title">Who We Are</h2>
                 <ul class="mega-list">
-                  <li><a href="#" class="mega-link"><span>Our Story</span></a></li>
+                  <li><a href="#" class="mega-link" style="border-top: 2px solid var(--divider);"><span>Our Story</span></a></li>
                   <li><a href="#" class="mega-link"><span>Team</span></a></li>
                   <li><a href="#" class="mega-link"><span>Culture</span></a></li>
                   <li><a href="#" class="mega-link"><span>Careers</span></a></li>
@@ -119,7 +122,7 @@
               <div class="mega-inner">
                 <h2 class="mega-title">Innovation</h2>
                 <ul class="mega-list">
-                  <li><a href="#" class="mega-link"><span>Attention Labs</span></a></li>
+                  <li><a href="#" class="mega-link" style="border-top: 2px solid var(--divider);"><span>Attention Labs</span></a></li>
                   <li><a href="#" class="mega-link"><span>Research</span></a></li>
                   <li><a href="#" class="mega-link"><span>AI &amp; Tech</span></a></li>
                 </ul>
@@ -138,7 +141,7 @@
               <div class="mega-inner">
                 <h2 class="mega-title">Latest</h2>
                 <ul class="mega-list">
-                  <li><a href="#" class="mega-link"><span>News</span></a></li>
+                  <li><a href="#" class="mega-link" style="border-top: 2px solid var(--divider);"><span>News</span></a></li>
                   <li><a href="#" class="mega-link"><span>Insights</span></a></li>
                   <li><a href="#" class="mega-link"><span>Awards</span></a></li>
                 </ul>
@@ -158,10 +161,100 @@
           <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </a>
-
+<button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+  <span></span>
+  <span></span>
+</button>
     </div>
   </header>
-
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+ 
+  <button class="mm-close" id="menuClose" type="button" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" width="28" height="28">
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+    </svg>
+  </button>
+ 
+  <div class="mm-panels">
+ 
+    <!-- MAIN PANEL -->
+    <nav class="mm-panel is-active" data-panel="main" aria-label="Mobile">
+      <ul class="mm-list">
+        <li><a href="/" class="mm-link">Homepage</a></li>
+        <li><button type="button" class="mm-link mm-more" data-open="what">What We Do <svg viewBox="0 0 24 24" width="28" height="28"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></button></li>
+        <li><button type="button" class="mm-link mm-more" data-open="help">Who We Help <svg viewBox="0 0 24 24" width="28" height="28"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></button></li>
+        <li><a href="#" class="mm-link">Our Work</a></li>
+        <li><button type="button" class="mm-link mm-more" data-open="how">How We Do It <svg viewBox="0 0 24 24" width="28" height="28"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></button></li>
+        <li><button type="button" class="mm-link mm-more" data-open="who">Who We Are <svg viewBox="0 0 24 24" width="28" height="28"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></button></li>
+        <li><button type="button" class="mm-link mm-more" data-open="innovation">Innovation <svg viewBox="0 0 24 24" width="28" height="28"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></button></li>
+        <li><button type="button" class="mm-link mm-more" data-open="latest">Latest <svg viewBox="0 0 24 24" width="28" height="28"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></button></li>
+      </ul>
+    </nav>
+ 
+    <!-- SUB PANELS -->
+    <nav class="mm-panel" data-panel="what">
+      <button type="button" class="mm-link mm-back"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg> Back</button>
+      <ul class="mm-list">
+        <li><a href="pr.html" class="mm-link">PR</a></li>
+        <li><a href="#" class="mm-link">Social Media</a></li>
+      </ul>
+    </nav>
+ 
+    <nav class="mm-panel" data-panel="help">
+      <button type="button" class="mm-link mm-back"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg> Back</button>
+      <ul class="mm-list">
+        <li><a href="#" class="mm-link">Consumer Brands</a></li>
+        <li><a href="#" class="mm-link">B2B</a></li>
+        <li><a href="#" class="mm-link">Corporate</a></li>
+      </ul>
+    </nav>
+ 
+    <nav class="mm-panel" data-panel="how">
+      <button type="button" class="mm-link mm-back"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg> Back</button>
+      <ul class="mm-list">
+        <li><a href="#" class="mm-link">Attention</a></li>
+        <li><a href="#" class="mm-link">Strategy</a></li>
+        <li><a href="#" class="mm-link">Creative</a></li>
+        <li><a href="#" class="mm-link">Insight</a></li>
+      </ul>
+    </nav>
+ 
+    <nav class="mm-panel" data-panel="who">
+      <button type="button" class="mm-link mm-back"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg> Back</button>
+      <ul class="mm-list">
+        <li><a href="#" class="mm-link">Our Story</a></li>
+        <li><a href="#" class="mm-link">Team</a></li>
+        <li><a href="#" class="mm-link">Culture</a></li>
+        <li><a href="#" class="mm-link">Careers</a></li>
+      </ul>
+    </nav>
+ 
+    <nav class="mm-panel" data-panel="innovation">
+      <button type="button" class="mm-link mm-back"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg> Back</button>
+      <ul class="mm-list">
+        <li><a href="#" class="mm-link">Attention Labs</a></li>
+        <li><a href="#" class="mm-link">Research</a></li>
+        <li><a href="#" class="mm-link">AI &amp; Tech</a></li>
+      </ul>
+    </nav>
+ 
+    <nav class="mm-panel" data-panel="latest">
+      <button type="button" class="mm-link mm-back"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg> Back</button>
+      <ul class="mm-list">
+        <li><a href="#" class="mm-link">News</a></li>
+        <li><a href="#" class="mm-link">Insights</a></li>
+        <li><a href="#" class="mm-link">Awards</a></li>
+      </ul>
+    </nav>
+ 
+  </div>
+ 
+  <div class="mm-footer">
+    <a href="#" class="mm-contact">Contact Us</a>
+  </div>
+ 
+</div>
+ 
   <!-- ============ MAIN ============ -->
   <main>
 
@@ -187,10 +280,21 @@
         </div>
 
         <div class="hero-awards" aria-hidden="true">
-          <img src="https://www.tangerinecomms.com/wp-content/uploads/2025/03/Cannes-Lions-2025.png" alt="" class="hero-award" />
-          <img src="https://www.tangerinecomms.com/wp-content/uploads/2025/03/The-WARC-Awards-2025.png" alt="" class="hero-award" />
-          <img src="https://www.tangerinecomms.com/wp-content/uploads/2025/03/Grand-Prix-Winner.png" alt="" class="hero-award" />
-          <img src="https://www.tangerinecomms.com/wp-content/uploads/2025/03/Marketing-Week-Awards-2025.png" alt="" class="hero-award" />
+          <img src="images/award-1.png" alt="" class="hero-award" />
+          <img src="images/award-2.png" alt="" class="hero-award" />
+          <img src="images/award-3.png" alt="" class="hero-award" />
+          <img src="images/award-4.png" alt="" class="hero-award" />
+          <img src="images/award-5.png" alt="" class="hero-award" />
+          <img src="images/award-6.png" alt="" class="hero-award" />
+          <img src="images/award-7.png" alt="" class="hero-award" />
+          <img src="images/award-8.png" alt="" class="hero-award" />
+          <img src="images/award-9.png" alt="" class="hero-award" />
+          <img src="images/award-10.png" alt="" class="hero-award" />
+          <img src="images/award-11.png" alt="" class="hero-award" />
+          <img src="images/award-12.png" alt="" class="hero-award" />
+          <img src="images/award-13.png" alt="" class="hero-award" />
+          <img src="images/award-14.png" alt="" class="hero-award" />
+          <img src="images/award-15.png" alt="" class="hero-award" />
         </div>
 
         <button class="mute-toggle" type="button" aria-label="Toggle sound">
@@ -274,7 +378,7 @@
             changing results.
           </p>
           <a href="#" class="service-image">
-            <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Artboard-1-1000x0-c-default.jpg" alt="PR campaign" />
+            <img src="images/pr.jpg" alt="PR campaign" />
             <div class="service-overlay">
               <div class="service-marquee">
                 <span class="marquee-text">Discover PR</span>
@@ -303,7 +407,7 @@
             real, tangible outcomes for brands.
           </p>
           <a href="#" class="service-image">
-            <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Roblox-1-1000x0-c-default.jpg" alt="Social campaign" />
+            <img src="images/social.jpg" alt="Social campaign" />
             <div class="service-overlay">
               <div class="service-marquee">
                 <span class="marquee-text">Discover Social</span>
@@ -362,8 +466,8 @@
 
         <div class="work-col work-col-left">
 
-          <a href="#" class="work-card work-card-tall">
-            <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Artboard-1-1000x0-c-default.jpg" alt="Project" />
+          <a href="#" class="work-card work-card-short">
+            <img src="images/work-1.jpg" alt="Project" />
             <div class="work-overlay">
               <div class="work-marquee">
                 <span class="marquee-text">View Project</span>
@@ -377,8 +481,23 @@
             <span class="work-badge">Specsavers</span>
           </a>
 
-          <a href="#" class="work-card work-card-tall">
-            <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Roblox-1-1000x0-c-default.jpg" alt="Project" />
+          <a href="#" class="work-card work-card-short">
+            <img src="images/work-3.jpg" alt="Project" />
+            <div class="work-overlay">
+              <div class="work-marquee">
+                <span class="marquee-text">View Project</span>
+                <span class="marquee-mark" aria-hidden="true"></span>
+                <span class="marquee-text">View Project</span>
+                <span class="marquee-mark" aria-hidden="true"></span>
+                <span class="marquee-text">View Project</span>
+                <span class="marquee-mark" aria-hidden="true"></span>
+              </div>
+            </div>
+            <span class="work-badge">Specsavers</span>
+          </a>
+
+          <a href="#" class="work-card work-card-short">
+            <img src="images/work-5.jpg" alt="Project" />
             <div class="work-overlay">
               <div class="work-marquee">
                 <span class="marquee-text">View Project</span>
@@ -392,12 +511,8 @@
             <span class="work-badge">Primark</span>
           </a>
 
-        </div>
-
-        <div class="work-col work-col-right">
-
           <a href="#" class="work-card work-card-short">
-            <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Artboard-1-1000x0-c-default.jpg" alt="Project" />
+            <img src="images/work-7.jpg" alt="Project" />
             <div class="work-overlay">
               <div class="work-marquee">
                 <span class="marquee-text">View Project</span>
@@ -408,11 +523,30 @@
                 <span class="marquee-mark" aria-hidden="true"></span>
               </div>
             </div>
-            <span class="work-badge">TENA Men</span>
+            <span class="work-badge">Topcon</span>
+          </a>
+
+        </div>
+
+        <div class="work-col work-col-right">
+
+          <a href="#" class="work-card work-card-short">
+            <img src="images/work-2.jpg" alt="Project" />
+            <div class="work-overlay">
+              <div class="work-marquee">
+                <span class="marquee-text">View Project</span>
+                <span class="marquee-mark" aria-hidden="true"></span>
+                <span class="marquee-text">View Project</span>
+                <span class="marquee-mark" aria-hidden="true"></span>
+                <span class="marquee-text">View Project</span>
+                <span class="marquee-mark" aria-hidden="true"></span>
+              </div>
+            </div>
+            <span class="work-badge">Specsavers</span>
           </a>
 
           <a href="#" class="work-card work-card-short">
-            <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Roblox-1-1000x0-c-default.jpg" alt="Project" />
+            <img src="images/work-4.jpg" alt="Project" />
             <div class="work-overlay">
               <div class="work-marquee">
                 <span class="marquee-text">View Project</span>
@@ -427,7 +561,22 @@
           </a>
 
           <a href="#" class="work-card work-card-short">
-            <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Artboard-1-1000x0-c-default.jpg" alt="Project" />
+            <img src="images/work-6.jpg" alt="Project" />
+            <div class="work-overlay">
+              <div class="work-marquee">
+                <span class="marquee-text">View Project</span>
+                <span class="marquee-mark" aria-hidden="true"></span>
+                <span class="marquee-text">View Project</span>
+                <span class="marquee-mark" aria-hidden="true"></span>
+                <span class="marquee-text">View Project</span>
+                <span class="marquee-mark" aria-hidden="true"></span>
+              </div>
+            </div>
+            <span class="work-badge">TENA Men</span>
+          </a>
+
+          <a href="#" class="work-card work-card-short">
+            <img src="images/work-8.jpg" alt="Project" />
             <div class="work-overlay">
               <div class="work-marquee">
                 <span class="marquee-text">View Project</span>
@@ -472,14 +621,12 @@
 
             <div class="testimonial-slide is-active">
               <blockquote class="testimonial-quote">
-                "I trust Tangerine completely. They get our business and they
-                approach PR and Social in a genuinely progressive way. The
-                results speak for themselves."
+                "We came to you with a problem last year that is “less young people like us”, 1 year later the problem is gone, and we have more young people coming to us than ever. This is due to the amazing creativity, fabulous planning and strategic vision you guys have."
               </blockquote>
 
               <div class="testimonial-attribution">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Specsavers_Logo.svg/320px-Specsavers_Logo.svg.png" alt="Specsavers" class="testimonial-logo" />
-                <p class="testimonial-name">Lisa Hale, Head of Brand Activation, Social and PR</p>
+                <p class="testimonial-name">Vicky Clarke, Marketing Services Director</p>
                 <p class="testimonial-company">Specsavers</p>
               </div>
             </div>
@@ -654,7 +801,7 @@
           </p>
 
           <a href="#" class="shape-visual shape-visual-image">
-            <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Artboard-1-1000x0-c-default.jpg" alt="Shapes of Attention" />
+            <img src="images/shapes.jpg" alt="Shapes of Attention" />
             <div class="shape-overlay">
               <div class="work-marquee">
                 <span class="marquee-text">View Report</span>
@@ -864,7 +1011,6 @@
 
       </div>
     </section>
-<!-- ===== PASTE 1: inside <main>, after the .awards section ===== -->
 
 <!-- BLOG SLIDER -->
 <section class="blog">
@@ -898,8 +1044,13 @@
             <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Artboard-1-1000x0-c-default.jpg" alt="" />
             <span class="blog-date"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>2024-07-29</span>
           </div>
-          <span class="blog-tag">Awards</span>
-          <h3 class="blog-card-title">Tangerine Communications receives a double win at the UK Content Awards</h3>
+          <div class="tag">
+          <span class="blog-tag">B2B</span>
+           <span class="blog-tag">Corporate</span>
+            <span class="blog-tag">Intel</span>
+             <span class="blog-tag">Tangerine</span>
+             </div>
+          <h3 class="blog-card-title">How Andy Burnham Became the UK's First Influencer Prime Minister</h3>
         </a>
 
         <a href="#" class="blog-card">
@@ -907,8 +1058,12 @@
             <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Roblox-1-1000x0-c-default.jpg" alt="" />
             <span class="blog-date"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>2024-07-11</span>
           </div>
-          <span class="blog-tag">Intel</span>
-          <h3 class="blog-card-title">MAD//FEST debrief: learnings for PR and social</h3>
+          <div class="tag">
+          <span class="blog-tag">B2B</span>
+           <span class="blog-tag">Corporate</span>
+            <span class="blog-tag">Tangerine</span>
+            </div>
+          <h3 class="blog-card-title">AI is changing PR. That should make good corporate counsel more valuable </h3>
         </a>
 
         <a href="#" class="blog-card">
@@ -916,8 +1071,11 @@
             <img src="https://www.tangerinecomms.com/wp-content/uploads/2024/09/Artboard-1-1000x0-c-default.jpg" alt="" />
             <span class="blog-date"><svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>2024-06-26</span>
           </div>
-          <span class="blog-tag">Intel</span>
-          <h3 class="blog-card-title">Key takeaways from Cannes</h3>
+          <div class="tag">
+          <span class="blog-tag">B2B</span>
+           <span class="blog-tag">Tangerine</span>
+           </div>
+          <h3 class="blog-card-title">How are real estate brands chosen in the AI era?</h3>
         </a>
 
         <a href="#" class="blog-card">
@@ -954,7 +1112,10 @@
 </section>
 
 
-<!-- ===== PASTE 2: right after </main> ===== -->
+
+
+
+  </main>
 
 <footer class="site-footer" id="siteFooter">
   <div class="footer-box" id="footerBox">
@@ -1001,7 +1162,6 @@
     </div>
   </div>
 </footer>
-  </main>
 
   <!-- ============ SCRIPTS ============ -->
   <script>
@@ -1220,6 +1380,60 @@ if (blogSection) {
   }, { threshold: 0.25 }).observe(footer);
 })();
 
+// ---- Mobile menu: open / close / sub-panels ----
+(function () {
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('mobileMenu');
+  const closeBtn = document.getElementById('menuClose');
+  if (!toggle || !menu || !closeBtn) return;
+
+  const panels = menu.querySelectorAll('.mm-panel');
+
+  function showPanel(name) {
+    panels.forEach(p => p.classList.toggle('is-active', p.dataset.panel === name));
+  }
+
+  function openMenu() {
+    showPanel('main');
+    menu.classList.add('is-open');
+    menu.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('menu-open');
+  }
+
+  function closeMenu() {
+    menu.classList.remove('is-open');
+    menu.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+
+  toggle.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+
+  // arrow rows open their sub-panel
+  menu.querySelectorAll('[data-open]').forEach(btn => {
+    btn.addEventListener('click', () => showPanel(btn.dataset.open));
+  });
+
+  // Back buttons return to the main list
+  menu.querySelectorAll('.mm-back').forEach(btn => {
+    btn.addEventListener('click', () => showPanel('main'));
+  });
+
+  // tapping a real link closes the menu
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Esc closes
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
+  });
+
+  // resizing up to desktop closes it
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) closeMenu();
+  });
+})();
   </script>
 
 </body>

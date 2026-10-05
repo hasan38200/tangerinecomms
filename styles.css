@@ -158,7 +158,7 @@ body {
    ============================ */
 .mega-menu {
   position: absolute;
-  top: 100%;
+  top: 101%;
   left: 0;
   right: 0;
   padding: 8px 24px 24px;
@@ -186,10 +186,10 @@ body {
 
 .mega-inner {
   background: var(--panel-bg);
+  padding: 30px 30px;
   border-radius: 24px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
-  padding: 60px 64px;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -198,8 +198,8 @@ body {
 }
 
 .mega-title {
-  font-size: clamp(2.75rem, 5vw, 4.5rem);
-  font-weight: 800;
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
+  font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 1;
   color: var(--ink);
@@ -211,14 +211,16 @@ body {
   flex-direction: column;
 }
 
+
+
 .mega-list li {
-  border-bottom: 1.5px solid var(--divider);
+  border-bottom: 2px solid var(--divider);
 }
 
 .mega-link {
   display: block;
-  padding: 22px 4px;
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  padding: 4px;
+  font-size: clamp(0.5rem, 2.4vw, 1.5rem);
   font-weight: 600;
   letter-spacing: -0.02em;
   text-decoration: none;
@@ -1110,7 +1112,7 @@ body {
 .partners-top {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 60px;
+  gap: 50px;
   align-items: start;
   margin-bottom: 100px;
 }
@@ -1833,8 +1835,8 @@ body {
 }
 
 .blog-title {
-  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
-  font-weight: 700;
+  font-size: clamp(1.25rem, 4.5vw, 2.75rem);
+  font-weight: 600;
   letter-spacing: -0.045em;
   line-height: 1.1;
   color: var(--ink);
@@ -1856,7 +1858,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 16px 28px;
+  padding: 13px 25px;
   border: 2px solid var(--accent);
   border-radius: 999px;
   color: var(--ink);
@@ -1943,9 +1945,17 @@ body {
   transform: translateY(0);
 }
 
-.blog.in-view .blog-card:nth-child(3n+1) { transition-delay: 0.25s; }
-.blog.in-view .blog-card:nth-child(3n+2) { transition-delay: 0.40s; }
-.blog.in-view .blog-card:nth-child(3n+3) { transition-delay: 0.55s; }
+.blog.in-view .blog-card:nth-child(3n+1) {
+  transition-delay: 0.25s;
+}
+
+.blog.in-view .blog-card:nth-child(3n+2) {
+  transition-delay: 0.40s;
+}
+
+.blog.in-view .blog-card:nth-child(3n+3) {
+  transition-delay: 0.55s;
+}
 
 .blog-img {
   position: relative;
@@ -1983,6 +1993,11 @@ body {
   font-weight: 500;
 }
 
+.tag {
+  display: flex;
+  gap: 10px
+}
+
 .blog-tag {
   border: 1.5px solid var(--accent);
   border-radius: 999px;
@@ -2004,8 +2019,7 @@ body {
    ============================ */
 .site-footer {
   padding: 0 28px 28px;
-  /* reserves the final height so layout never jumps (set by JS) */
-  min-height: var(--footer-h, 700px);
+  min-height: var(--footer-h, 500px);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -2047,7 +2061,7 @@ body {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-weight: 700;
-  font-size: clamp(3.5rem, 11vw, 10rem);
+  font-size: clamp(4.5rem, 11vw, 10rem);
   letter-spacing: -0.04em;
   line-height: 1;
   text-align: center;
@@ -2062,7 +2076,7 @@ body {
   border-radius: 999px;
   color: #fff;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   transition: background 0.3s ease;
 }
@@ -2113,7 +2127,7 @@ body {
 }
 
 .footer-col h4 {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -2121,7 +2135,7 @@ body {
 .footer-col a {
   color: #fff;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   transition: color 0.25s ease;
 }
@@ -2155,49 +2169,196 @@ body {
   text-decoration: none;
 }
 
-/* ---- Responsive ---- */
-@media (max-width: 900px) {
-  .blog {
-    padding: 20px 20px 60px;
-    --gap: 20px;
-  }
+/* ==========================================================
+   22. MOBILE MENU + FULL RESPONSIVE PASS  (paste at very bottom)
+   ========================================================== */
 
-  .blog-arrow {
-    width: 44px;
-    height: 44px;
-  }
+/* never allow sideways scroll (clip keeps the sticky header working) */
+body {
+  overflow-x: clip;
+}
 
-  .site-footer {
-    padding: 0 12px 12px;
-  }
+img,
+video,
+svg {
+  max-width: 100%;
+}
 
-  .footer-box {
-    border-radius: 24px;
-    width: 60%;
-  }
+/* ---- Hamburger button (hidden on desktop) ---- */
+.menu-toggle {
+  display: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--ink);
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
 
-  .footer-content {
-    padding: 48px 24px 24px;
-  }
+.menu-toggle:active {
+  transform: scale(0.94);
+}
 
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  border-radius: 3px;
+  background: #fff;
+}
 
-  .footer-socials {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: none;
-  }
+/* ---- Full-screen mobile menu ---- */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: #141414;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+}
 
-  .footer-socials .footer-pill {
-    padding: 12px 20px;
-  }
+.mobile-menu.is-open {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.35s ease, visibility 0s;
+}
 
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
+body.menu-open {
+  overflow: hidden;
+}
+
+.mm-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 3;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 0;
+  background: #fff;
+  color: #141414;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.mm-close:hover {
+  transform: rotate(90deg);
+}
+
+.mm-panels {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.mm-panel {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  padding: 110px 24px 24px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(32px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0.45s;
+}
+
+.mobile-menu.is-open .mm-panel.is-active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity 0.35s ease 0.08s,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.08s,
+    visibility 0s;
+}
+
+.mm-list {
+  list-style: none;
+}
+
+.mm-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 0;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: clamp(1.9rem, 9vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.mm-link:hover {
+  color: var(--accent);
+}
+
+.mm-more svg {
+  flex-shrink: 0;
+}
+
+.mm-back {
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.mm-footer {
+  padding: 16px 24px 36px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.mm-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 42px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.mm-contact:hover {
+  background: #fff;
+  color: #141414;
+}
+
+/* desktop never sees the mobile menu */
+@media (min-width: 1025px) {
+
+  .mobile-menu,
+  .menu-toggle {
+    display: none !important;
   }
 }
 
@@ -2233,7 +2394,6 @@ body {
   }
 
   .mega-inner {
-    padding: 48px;
     gap: 48px;
   }
 
@@ -2520,5 +2680,818 @@ body {
   .award-logo {
     height: 60px;
     min-width: 140px;
+  }
+}
+
+/* ---- Hamburger replaces nav on tablets + phones ---- */
+@media (max-width: 1024px) {
+
+  .main-nav,
+  .header-inner>.cta-button {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header-inner {
+    justify-content: space-between;
+  }
+}
+
+/* ---- Tablet (<= 900px) extras ---- */
+@media (max-width: 900px) {
+
+  /* ---------- ROOT ---------- */
+  :root {
+    --header-pad: 20px;
+    --header-h: 72px;
+  }
+
+  /* ---------- HEADER ---------- */
+  .main-nav {
+    display: none;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .logo-mark {
+    width: 15px;
+    height: 20px;
+  }
+
+  .cta-button {
+    padding: 14px 22px;
+    font-size: 0.85rem;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 16px 20px 40px;
+  }
+
+  .hero-video {
+    border-radius: 16px;
+  }
+
+  .hero-awards {
+    top: 4%;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .hero-award {
+    width: 60px;
+  }
+
+  .mute-toggle {
+    width: 44px;
+    height: 44px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .hero-pill {
+    padding: 14px 26px;
+    font-size: 1rem;
+  }
+
+  .hero-pills {
+    margin-top: 28px;
+    gap: 12px;
+  }
+
+  /* ---------- INTRO ---------- */
+  .intro {
+    padding: 60px 20px 80px;
+  }
+
+  .intro-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .intro-heading {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .intro-body {
+    gap: 24px;
+    padding-top: 0;
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services {
+    padding: 60px 20px 60px;
+    margin-top: 0;
+  }
+
+  .services-inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .service-copy {
+    max-width: 100%;
+  }
+
+  .service-image {
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
+  }
+
+  /* ---------- RECENT WORK MARQUEES ---------- */
+  .recent-work {
+    padding: 60px 0 20px;
+  }
+
+  .recent-track span {
+    font-size: clamp(3rem, 18vw, 5rem);
+  }
+
+  .recent-cta {
+    padding: 0 0 16px;
+  }
+
+  .recent-button {
+    padding: 14px 26px;
+    font-size: 0.9rem;
+  }
+
+  /* ---------- RECENT WORK GRID ---------- */
+  .work-grid {
+    padding: 0 20px 60px;
+  }
+
+  .work-grid-inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .work-col {
+    gap: 16px;
+  }
+
+  .work-card-tall,
+  .work-card-short {
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Remove desktop offsets */
+  .work-col-right,
+  .service:nth-child(2),
+  .shape-card:nth-child(2) {
+    margin-top: 0;
+  }
+
+  /* ---------- TESTIMONIAL ---------- */
+  .testimonial {
+    padding: 60px 20px 80px;
+  }
+
+  .testimonial-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .testimonial-side {
+    gap: 32px;
+    padding-top: 0;
+  }
+
+  .testimonial-label {
+    max-width: none;
+    font-size: 1.1rem;
+  }
+
+  .testimonial-arrow {
+    width: 56px;
+    height: 56px;
+  }
+
+  .testimonial-quote {
+    font-size: 1.25rem;
+  }
+
+  .testimonial-slide {
+    gap: 32px;
+  }
+
+  .testimonial-logo {
+    height: 44px;
+    margin-bottom: 12px;
+  }
+
+  /* ---------- PARTNERS — "We Partner With..." ---------- */
+  .partners {
+    padding: 0 20px 60px;
+  }
+
+  .partners-inner {
+    padding: 48px 32px 40px;
+    border-radius: 24px;
+  }
+
+  /* Stack the title + button vertically instead of side-by-side */
+  .partners-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .partners-title {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
+
+  /* Left-aligned button below the title — proper tap target */
+   .partners-button {
+    justify-self: start;   /* horizontal alignment in a grid */
+    width: fit-content;    /* shrink to its content, like desktop */
+  }
+
+  .partners-track {
+    gap: 48px;
+  }
+
+  .partner-logo {
+    height: 60px;
+    min-width: 150px;
+  }
+
+  .pl-bodyform-text,
+  .pl-citation-text,
+  .pl-dunelm-text {
+    font-size: 1.15rem;
+  }
+
+  .pl-atg-text {
+    font-size: 1.75rem;
+  }
+
+  /* ---------- ATTENTION LABS ---------- */
+  .attention-labs {
+    padding: 0 0 60px;
+  }
+
+  .attention-track {
+    gap: 48px;
+  }
+
+  .attention-track span {
+    font-size: clamp(3rem, 18vw, 6rem);
+  }
+
+  .attention-cta {
+    padding: 24px 20px 0;
+    justify-content: flex-start;
+  }
+
+  .attention-button {
+    padding: 14px 26px;
+    font-size: 0.9rem;
+  }
+
+  /* ---------- SHAPES OF ATTENTION / PROJECT 10 ---------- */
+  .shapes {
+    padding: 0 20px 60px;
+  }
+
+  .shapes-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .shape-copy {
+    max-width: 100%;
+  }
+
+  .shape-label {
+    font-size: 1.75rem;
+  }
+
+  /* ---------- AWARDS ---------- */
+  .awards {
+    padding: 20px 20px 60px;
+  }
+
+  .awards-inner {
+    border-radius: 24px;
+    width: 50%;
+    min-height: 120px;
+  }
+
+  .awards.in-view .awards-inner {
+    padding: 48px 32px 40px;
+  }
+
+  .awards-title {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    margin-bottom: 48px;
+  }
+
+  .awards-track {
+    gap: 40px;
+  }
+
+  .award-logo {
+    height: 60px;
+    min-width: 140px;
+  }
+
+  /* ---------- BLOG SLIDER — "Attention Please!" ---------- */
+  .blog {
+    padding: 20px 20px 60px;
+    --gap: 20px;
+    --per: 2;              /* 2 cards visible on tablet */
+  }
+
+  .blog-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .site-footer {
+    padding: 0 12px 12px;
+  }
+
+  .footer-box {
+    border-radius: 24px;
+    width: 60%;
+  }
+
+  .footer-content {
+    padding: 48px 24px 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-socials {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: none;
+  }
+
+  .footer-socials .footer-pill {
+    padding: 12px 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .blog {
+    padding: 20px 20px 60px;
+    --gap: 20px;
+  }
+
+  .blog-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .site-footer {
+    padding: 0 12px 12px;
+  }
+
+  .footer-box {
+    border-radius: 24px;
+    width: 60%;
+  }
+
+  .footer-content {
+    padding: 48px 24px 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-socials {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: none;
+  }
+
+  .footer-socials .footer-pill {
+    padding: 12px 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ---- Phones (<= 600px) ---- */
+@media (max-width: 600px) {
+  .logo-text {
+    font-size: 1.4rem;
+  }
+
+  .menu-toggle {
+    width: 48px;
+    height: 48px;
+    gap: 6px;
+  }
+
+  .menu-toggle span {
+    width: 20px;
+    height: 2.5px;
+  }
+
+  .mm-close {
+    width: 52px;
+    height: 52px;
+    top: 12px;
+    right: 16px;
+  }
+
+  .mm-panel {
+    padding: 84px 20px 20px;
+  }
+
+  .mm-footer {
+    padding: 12px 20px 28px;
+  }
+
+  .mm-contact {
+    padding: 16px 34px;
+    font-size: 1rem;
+  }
+
+  /* hero: taller frame so the headline fits */
+  .hero {
+    padding: 12px 16px 32px;
+  }
+
+  .hero-video {
+    aspect-ratio: 4 / 5;
+    border-radius: 16px;
+  }
+
+  .hero-clip {
+    object-position: center;
+  }
+
+  .hero-line-1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-line-2 {
+    font-size: 2.6rem;
+  }
+
+  .hero-line-3 {
+    font-size: 1.6rem;
+  }
+
+  .hero-awards {
+    top: 5%;
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .hero-award {
+    width: 52px;
+  }
+
+  .hero-pills {
+    gap: 10px;
+  }
+
+  .hero-pill {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .intro {
+    padding: 48px 16px 64px;
+  }
+
+  .intro-copy {
+    font-size: 0.95rem;
+  }
+
+  .services {
+    padding: 48px 16px 48px;
+  }
+
+  .service-copy {
+    font-size: 0.95rem;
+  }
+
+  .marquee-text,
+  .marquee-mark {
+    font-size: 2.2rem;
+  }
+
+  .work-grid {
+    padding: 0 16px 48px;
+  }
+
+  .work-card {
+    border-radius: 18px;
+  }
+
+  .work-marquee .marquee-text,
+  .work-marquee .marquee-mark {
+    font-size: 2.2rem;
+  }
+
+  .testimonial {
+    padding: 48px 16px 64px;
+  }
+
+  .testimonial-quote {
+    font-size: 1.15rem;
+  }
+
+  .testimonial-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .partners {
+    padding: 0 16px 48px;
+  }
+
+  .partners-inner {
+    padding: 36px 22px 32px;
+  }
+
+  .partners-top {
+    margin-bottom: 36px;
+  }
+
+  .shapes {
+    padding: 0 16px 48px;
+  }
+
+  .shape-visual {
+    border-radius: 18px;
+  }
+
+  .awards {
+    padding: 16px 16px 48px;
+  }
+
+  .awards.in-view .awards-inner {
+    padding: 36px 22px 32px;
+  }
+
+  .awards-title {
+    margin-bottom: 32px;
+  }
+
+  /* blog */
+  .blog {
+    padding: 16px 16px 48px;
+  }
+
+  .blog-head {
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .blog-title {
+    font-size: 1.9rem;
+    margin-bottom: 16px;
+  }
+
+  .blog-button {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+
+  .blog-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .blog-controls {
+    gap: 10px;
+  }
+
+  .blog-img {
+    border-radius: 18px;
+  }
+
+  .blog-card-title {
+    font-size: 1.2rem;
+  }
+
+  /* footer */
+  .site-footer {
+    padding: 0 8px 8px;
+  }
+
+  .footer-box {
+    width: 75%;
+    height: 120px;
+    border-radius: 22px;
+  }
+
+  .footer-content {
+    padding: 40px 18px 22px;
+  }
+
+  .footer-heading {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+
+  .footer-tagline {
+    margin: 20px 0 36px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
+    margin-bottom: 36px;
+  }
+
+  .footer-socials {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-socials .footer-pill {
+    padding: 10px 18px;
+  }
+
+  .footer-legal {
+    gap: 12px 18px;
+  }
+}
+
+/* ---- Very small phones (<= 380px) ---- */
+@media (max-width: 380px) {
+  .hero-line-2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-line-3 {
+    font-size: 1.35rem;
+  }
+
+  .mm-link {
+    font-size: 1.75rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================================================
+   23. MATCH REFERENCE LAYOUT (desktop/tablet >= 901px)
+   ========================================================== */
+:root {
+  --pad: clamp(16px, 2vw, 40px);
+}
+
+/* hero award laurels: 5 x 3 grid */
+.hero-awards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5% 3%;
+  width: min(760px, 90%);
+  margin: 0 auto;
+  padding: 0;
+  top: 5%;
+}
+
+.hero-awards .hero-award {
+  width: 100%;
+  max-width: 90px;
+  justify-self: center;
+}
+
+@media (min-width: 901px) {
+
+  .header-inner,
+  .hero,
+  .intro,
+  .services,
+  .work-grid,
+  .testimonial,
+  .partners,
+  .shapes,
+  .awards,
+  .blog,
+  .attention-cta {
+    padding-left: var(--pad);
+    padding-right: var(--pad);
+  }
+
+  .site-footer {
+    padding-left: var(--pad);
+    padding-right: var(--pad);
+  }
+
+  .intro-inner {
+    gap: 28px;
+  }
+
+  .intro-heading {
+    font-size: clamp(1.75rem, 3.6vw, 2.5rem);
+    font-weight: 600;
+  }
+
+  .intro-copy strong {
+    text-decoration: underline;
+  }
+
+  .services-inner {
+    column-gap: 28px;
+  }
+
+  .service-title {
+    font-weight: 600;
+    font-size: clamp(2rem, 3.7vw, 2.5rem);
+  }
+
+  .service-copy {
+    max-width: 100%;
+  }
+
+  .service-image {
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
+  }
+
+  .service:nth-child(2) {
+    margin-top: 82px;
+  }
+
+  .work-col-right {
+    margin-top: 84px;
+  }
+
+  .shapes-inner {
+    gap: 28px;
+  }
+
+  .shape-title {
+    font-weight: 600;
+  }
+
+  .shape-card:nth-child(2) {
+    margin-top: 84px;
+  }
+}
+
+.work-card-tall,
+.work-card-short {
+  aspect-ratio: 506 / 283;
+}
+
+.testimonial-label {
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.testimonial-quote {
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: clamp(1.5rem, 2.6vw, 1.75rem);
+}
+
+@media (max-width: 900px) {
+
+  .work-col-right,
+  .service:nth-child(2),
+  .shape-card:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .work-card-tall,
+  .work-card-short {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+.hero-copy {
+  align-items: flex-end;
+  padding-bottom: 5%;
+}
+
+@media (max-width: 600px) {
+  .hero-copy {
+    padding-bottom: 8%;
   }
 }
