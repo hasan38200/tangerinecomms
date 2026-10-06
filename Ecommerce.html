@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Social — Tangerine</title>
-  <link rel="stylesheet" href="socialmedia.css" />
+  <title>Ecommerce — Tangerine</title>
+  <link rel="stylesheet" href="Ecommerce.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="header-inner">
@@ -200,135 +201,142 @@
   <!-- ============ MAIN ============ -->
   <main>
 
-    <!-- SOCIAL HERO -->
-    <section class="pr-hero">
-      <div class="pr-hero-image">
-        <img src="images/social-hero.jpg" alt="Specsavers football team" />
+    <!-- B2B HERO VIDEO -->
+    <section class="b2b-hero">
+      <div class="b2b-video">
+        <video id="b2bVideo" autoplay muted loop playsinline poster="images/b2b-hero.jpg">
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4" />
+        </video>
+        <button class="mute-toggle" id="b2bMute" type="button" aria-label="Toggle sound">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor" />
+            <g class="mute-x"><line x1="16" y1="9" x2="22" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round" /><line x1="22" y1="9" x2="16" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></g>
+            <g class="mute-wave"><path d="M15.5 8.500a5 5 0 0 1 0 7M18.500 5.500a9 9 0 0 1 0 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></g>
+          </svg>
+        </button>
       </div>
     </section>
 
-    <!-- SOCIAL INTRO -->
+    <!-- B2B INTRO -->
     <section class="pr-intro" id="prIntro">
       <div class="pr-intro-inner">
         <div class="pr-intro-left">
-          <span class="pr-tag">Social</span>
+          <span class="pr-tag">B2B</span>
           <h1 class="pr-intro-title">
-            <span class="pr-intro-title-inner" data-split>We think big, we act fast, <br>we make attention pay</span>
+            <span class="pr-intro-title-inner" data-split>Making attention pay <br>for B2B brands</span>
           </h1>
         </div>
         <div class="pr-intro-right">
-          <p data-split="0.5">Born in PR and raised in social, we're digital natives building superbrands through the power of attention.</p>
-          <p data-split="0.5">When brands invest in attention they see an 84% increase in purchase intent and a 40% lift in brand recall so we combine the thinking of a big creative agency with the speed and agility of a PR machine to capture attention and convert it, delivering real, tangible results for brands.</p>
-          <p data-split="0.5">Our award-winning work earns global recognition not just for strategic thinking and creativity, but also for its effectiveness. Social activation of the Cannes-Award-winning Misheard Lyrics campaign for Specsavers saw a 66% increase in hearing test bookings, whilst the more recent Best Worst Team campaign resulted in a 70% spike in brand consideration.</p>
+          <p data-split="0.5">We work with B2B brands that want to shake things up in their industry and take the fight for attention beyond their sector.</p>
+          <p data-split="0.5">We help them to cut through the mainstream noise with amazing stories and award-winning campaigns that capture the attention of the right audiences at the right time.</p>
+          <p data-split="0.5">Our work builds emotional connections and long-term relationships to make our client's brands the go-to option when it's time to buy. We balance brand building with sales activation to deliver tangible results that have real business impact.</p>
+          <p data-split="0.5">The brands we work with are more trusted, more respected, and more influential.</p>
         </div>
       </div>
     </section>
 
-    <!-- RECENT WORK MARQUEE -->
-    <section class="recent-work-cards">
-      <div class="recent-cards-track">
-        
-        <!-- SET 1 -->
-        <a href="#" class="recent-card"><img src="images/work-1.jpg" alt="Project 1" /></a>
-        <a href="#" class="recent-card card-specsavers">
-          <div class="card-social-post">
-            <div class="social-header">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Specsavers_Logo.svg/320px-Specsavers_Logo.svg.png" alt="Specsavers" class="social-logo" />
-              <div class="social-user">
-                <strong>Specsavers</strong>
-                <span>@Specsavers</span>
-              </div>
-            </div>
-            <p class="social-text">Free eye tests in Blackpool tomorrow.</p>
-          </div>
-        </a>
-        <a href="#" class="recent-card"><img src="images/work-2.jpg" alt="Project 2" /></a>
-        <a href="#" class="recent-card card-red">
-          <div class="card-red-content">
-            <h3 class="card-red-title">If @<br>cor<br>sto<br>wel<br>Gril</h3>
-          </div>
-        </a>
-        <a href="#" class="recent-card"><img src="images/work-3.jpg" alt="Project 3" /></a>
-        <a href="#" class="recent-card card-pink">
-          <div class="card-social-post">
-            <div class="social-header">
-              <span class="social-avatar">PR</span>
-              <div class="social-user">
-                <strong>Peldon Rose</strong>
-                <span>@PeldonRose</span>
-              </div>
-            </div>
-            <img src="images/work-1.jpg" alt="" class="social-img" />
-            <div class="social-actions">
-              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7-4.5-9.5-9C0 8 2 4 6 4c2.5 0 4 1.5 6 3.5C14 5.5 15.5 4 18 4c4 0 6 4 3.5 8C19 16.5 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-              <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M21 12l-4 4-5-5-5 5-4-4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M22 2L11 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 2l-7 20-4-9-9-4 20-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <svg viewBox="0 0 24 24" width="22" height="22" style="margin-left:auto;"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="recent-card"><img src="images/work-4.jpg" alt="Project 4" /></a>
+    <!-- CRISIS LAB -->
+    <section class="crisis" id="crisis">
+      <div class="crisis-inner">
 
-        <!-- SET 2 (duplicate) -->
-        <a href="#" class="recent-card"><img src="images/work-1.jpg" alt="Project 1" /></a>
-        <a href="#" class="recent-card card-specsavers">
-          <div class="card-social-post">
-            <div class="social-header">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Specsavers_Logo.svg/320px-Specsavers_Logo.svg.png" alt="Specsavers" class="social-logo" />
-              <div class="social-user">
-                <strong>Specsavers</strong>
-                <span>@Specsavers</span>
-              </div>
-            </div>
-            <p class="social-text">Free eye tests in Blackpool tomorrow.</p>
+        <div class="crisis-visual" aria-hidden="true">
+          <span class="cv-blob cv-blob-1"></span>
+          <span class="cv-blob cv-blob-2"></span>
+          <span class="cv-blob cv-blob-3"></span>
+          <span class="cv-glow"></span>
+          <span class="cv-ring cv-ring-1"></span>
+          <span class="cv-ring cv-ring-2"></span>
+          <span class="cv-ring cv-ring-3"></span>
+
+          <div class="cv-logo">
+            <span class="cv-logo-mark">
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+            </span>
+            <span class="cv-logo-text">The<br>Crisis Lab</span>
           </div>
-        </a>
-        <a href="#" class="recent-card"><img src="images/work-2.jpg" alt="Project 2" /></a>
-        <a href="#" class="recent-card card-red">
-          <div class="card-red-content">
-            <h3 class="card-red-title">If @<br>cor<br>sto<br>wel<br>Gril</h3>
-          </div>
-        </a>
-        <a href="#" class="recent-card"><img src="images/work-3.jpg" alt="Project 3" /></a>
-        <a href="#" class="recent-card card-pink">
-          <div class="card-social-post">
-            <div class="social-header">
-              <span class="social-avatar">PR</span>
-              <div class="social-user">
-                <strong>Peldon Rose</strong>
-                <span>@PeldonRose</span>
-              </div>
-            </div>
-            <img src="images/work-1.jpg" alt="" class="social-img" />
-            <div class="social-actions">
-              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7-4.5-9.5-9C0 8 2 4 6 4c2.5 0 4 1.5 6 3.5C14 5.5 15.5 4 18 4c4 0 6 4 3.5 8C19 16.5 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-              <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M21 12l-4 4-5-5-5 5-4-4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M22 2L11 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 2l-7 20-4-9-9-4 20-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <svg viewBox="0 0 24 24" width="22" height="22" style="margin-left:auto;"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="recent-card"><img src="images/work-4.jpg" alt="Project 4" /></a>
+
+          <span class="cv-chip cv-chip-1"><i></i>Breaking: story picked up</span>
+          <span class="cv-chip cv-chip-2"><i></i>Holding statement drafted</span>
+          <span class="cv-chip cv-chip-3"><i></i>12 press enquiries</span>
+          <span class="cv-chip cv-chip-4"><i></i>Sentiment stabilising</span>
+
+          <div class="cv-dots"><span></span><span></span><span></span></div>
+        </div>
+
+        <div class="crisis-copy">
+          <span class="pr-tag crisis-tag">The Crisis Lab</span>
+          <h2 class="crisis-title" data-split>An AI-powered crisis communications lab</h2>
+          <p>The Crisis Lab by Tangerine is a premium, half-day simulation for senior decision-makers who want to strengthen their crisis comms, reputation management and internal decision-making under pressure.</p>
+          <p>It combines live consultancy from our B2B and Corporate team, with bespoke AI-generated scenarios and newsroom-style reactive planning. It is designed to reflect real reputational threats and test a team's ability to protect attention, respond to scrutiny and lead recovery.</p>
+          <p>The new simulator has been developed as part of our £1.2m AI investment and is fully integrated into Tangerine's Corporate Newsroom.</p>
+          <p>Contact us for a live demonstration or to find out more.</p>
+          <a href="#" class="cta-button crisis-cta">
+            <span class="cta-text"><span class="cta-text-inner">Contact Us</span><span class="cta-text-inner cta-text-alt" aria-hidden="true">Contact Us</span></span>
+            <svg class="cta-arrow" viewBox="0 0 24 24" width="16" height="16"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </a>
+        </div>
 
       </div>
     </section>
 
-    <!-- MOMENTS -->
-    <section class="pr-moments" id="prMoments">
-      <div class="pr-moments-inner">
-        <div class="pr-moments-left">
-          <h2 class="pr-moments-title">
-            <span class="pr-moments-title-inner" data-split>We put brands at the centre of attention in the moments that matter</span>
-          </h2>
+    <!-- TESTIMONIAL -->
+    <section class="testimonial">
+      <div class="testimonial-inner">
+        <div class="testimonial-side">
+          <p class="testimonial-label">What our partners say about us</p>
+          <div class="testimonial-controls">
+            <button class="testimonial-arrow" id="testimonialPrev" type="button" aria-label="Previous testimonial">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="testimonial-arrow" id="testimonialNext" type="button" aria-label="Next testimonial">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="pr-moments-right">
-          <p data-split="1">Our award-winning team of untamed minds, experienced creators, and concise communicators react quickest to moments happening right now, producing story-enhancing, on-brand responses that people want to talk about and share.</p>
-          <p data-split="1">Our work gets you trending, lands you in the group chat. Whether it's a four-word 'xeet' grabbing 20 pieces of coverage or a pitch-perfect TikTok, we place your brand firmly at the centre of attention, whilst others are still chasing their tails.</p>
+        <div class="testimonial-body">
+          <div class="testimonial-track">
+
+            <div class="testimonial-slide is-active">
+              <blockquote class="testimonial-quote">
+                "We enlisted Tangerine as our retained PR agency in order to help improve our share of voice against competitors. When we started working together our brand awareness amongst media was non-existent, but with Tangerine's support over four years, we were able to gain a significant share of column inches. We've had coverage in all of our key trade press as well as frequent national hits."
+              </blockquote>
+              <div class="testimonial-attribution">
+                <p class="testimonial-name">Danielle Emery, Head of Marketing</p>
+                <p class="testimonial-company">Peldon Rose</p>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <blockquote class="testimonial-quote">
+                "Tangerine's strategic approach and creative solutions have significantly boosted our global presence and market leadership."
+              </blockquote>
+              <div class="testimonial-attribution">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Specsavers_Logo.svg/320px-Specsavers_Logo.svg.png" alt="Topcon" class="testimonial-logo" />
+                <p class="testimonial-name">Joe Glenon, Communications Marketing Manager</p>
+                <p class="testimonial-company">Topcon</p>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <blockquote class="testimonial-quote">
+                "Working with Tangerine has transformed how we think about PR and social. They bring strategic rigour combined with genuine creative bravery — a rare combination."
+              </blockquote>
+              <div class="testimonial-attribution">
+                <p class="testimonial-name">James Anderson, Marketing Director</p>
+                <p class="testimonial-company">TENA Men</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== AWARDS ========== -->
+    <!-- AWARDS -->
     <section class="awards">
       <div class="awards-inner">
 
@@ -347,32 +355,23 @@
                 <span class="award-line-3">AWARDS 2024</span>
               </span>
             </div>
-
             <div class="award-logo award-logo-uksocial">
               <span class="award-icon award-icon-dots"></span>
-              <span class="award-text award-text-uksocial">
-                UK Social<br />Media Awards
-              </span>
+              <span class="award-text award-text-uksocial">UK Social<br />Media Awards</span>
             </div>
-
             <div class="award-logo award-logo-b2b">
               <span class="award-icon award-icon-b2b"></span>
               <span class="award-text award-text-b2b">B2B Marketing</span>
             </div>
-
             <div class="award-logo award-logo-sabre">
               <span class="award-text award-text-sabre">
                 <span class="award-sabre-top">SABRE</span>
                 <span class="award-sabre-bottom">Awards</span>
               </span>
             </div>
-
             <div class="award-logo award-logo-prmoment">
-              <span class="award-text award-text-prmoment">
-                PRmoment<br />Awards 2025
-              </span>
+              <span class="award-text award-text-prmoment">PRmoment<br />Awards 2025</span>
             </div>
-
             <div class="award-logo award-logo-warc">
               <span class="award-icon award-icon-warc"></span>
             </div>
@@ -385,32 +384,23 @@
                 <span class="award-line-3">AWARDS 2024</span>
               </span>
             </div>
-
             <div class="award-logo award-logo-uksocial" aria-hidden="true">
               <span class="award-icon award-icon-dots"></span>
-              <span class="award-text award-text-uksocial">
-                UK Social<br />Media Awards
-              </span>
+              <span class="award-text award-text-uksocial">UK Social<br />Media Awards</span>
             </div>
-
             <div class="award-logo award-logo-b2b" aria-hidden="true">
               <span class="award-icon award-icon-b2b"></span>
               <span class="award-text award-text-b2b">B2B Marketing</span>
             </div>
-
             <div class="award-logo award-logo-sabre" aria-hidden="true">
               <span class="award-text award-text-sabre">
                 <span class="award-sabre-top">SABRE</span>
                 <span class="award-sabre-bottom">Awards</span>
               </span>
             </div>
-
             <div class="award-logo award-logo-prmoment" aria-hidden="true">
-              <span class="award-text award-text-prmoment">
-                PRmoment<br />Awards 2025
-              </span>
+              <span class="award-text award-text-prmoment">PRmoment<br />Awards 2025</span>
             </div>
-
             <div class="award-logo award-logo-warc" aria-hidden="true">
               <span class="award-icon award-icon-warc"></span>
             </div>
@@ -423,32 +413,23 @@
                 <span class="award-line-3">AWARDS 2024</span>
               </span>
             </div>
-
             <div class="award-logo award-logo-uksocial" aria-hidden="true">
               <span class="award-icon award-icon-dots"></span>
-              <span class="award-text award-text-uksocial">
-                UK Social<br />Media Awards
-              </span>
+              <span class="award-text award-text-uksocial">UK Social<br />Media Awards</span>
             </div>
-
             <div class="award-logo award-logo-b2b" aria-hidden="true">
               <span class="award-icon award-icon-b2b"></span>
               <span class="award-text award-text-b2b">B2B Marketing</span>
             </div>
-
             <div class="award-logo award-logo-sabre" aria-hidden="true">
               <span class="award-text award-text-sabre">
                 <span class="award-sabre-top">SABRE</span>
                 <span class="award-sabre-bottom">Awards</span>
               </span>
             </div>
-
             <div class="award-logo award-logo-prmoment" aria-hidden="true">
-              <span class="award-text award-text-prmoment">
-                PRmoment<br />Awards 2025
-              </span>
+              <span class="award-text award-text-prmoment">PRmoment<br />Awards 2025</span>
             </div>
-
             <div class="award-logo award-logo-warc" aria-hidden="true">
               <span class="award-icon award-icon-warc"></span>
             </div>
@@ -456,15 +437,6 @@
           </div>
         </div>
 
-      </div>
-    </section>
-
-    <!-- PROUD PARTNERS -->
-    <section class="sm-partners" id="smPartners">
-      <h2 class="sm-partners-title">Proud partners with</h2>
-      <div class="sm-partners-row">
-        <div class="partner-tile tile-meta"><svg viewBox="0 0 64 32" width="52" height="26"><path d="M8 26c-4 0-6-4-6-10S5 4 10 4c6 0 10 8 14 14s6 8 10 8c5 0 8-5 8-10S39 4 34 4c-6 0-9 6-13 12S12 26 8 26z" fill="none" stroke="#3b82f6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Meta</span></div>
-        <div class="partner-tile tile-tiktok"><svg viewBox="0 0 24 24" width="40" height="40"><path d="M16 3c.3 2.4 1.8 4 4 4.200v3.100c-1.500 0-2.900-.5-4-1.300v6.200c0 3.200-2.500 5.800-5.700 5.800S4.600 20.400 4.600 17.200 7.100 11.500 10.300 11.500c.3 0 .6 0 .9.100v3.200c-.3-.1-.6-.2-.9-.2-1.400 0-2.500 1.100-2.500 2.500s1.100 2.600 2.500 2.600 2.600-1.200 2.600-2.600V3H16z" fill="#fff"/></svg><span>TikTok</span></div>
       </div>
     </section>
 
@@ -478,42 +450,60 @@
       <div class="work-grid-inner">
         <div class="work-col work-col-left">
           <a href="#" class="work-card work-card-short">
-            <img src="images/work-1.jpg" alt="Specsavers project" />
+            <img src="images/work-1.jpg" alt="Topcon project" />
             <div class="work-overlay"><div class="work-marquee">
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
             </div></div>
-            <span class="work-badge">Specsavers</span>
+            <span class="work-badge">Topcon</span>
           </a>
           <a href="#" class="work-card work-card-short">
-            <img src="images/work-3.jpg" alt="Specsavers project" />
+            <img src="images/work-3.jpg" alt="Topcon project" />
             <div class="work-overlay"><div class="work-marquee">
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
             </div></div>
-            <span class="work-badge">Specsavers</span>
+            <span class="work-badge">Topcon</span>
+          </a>
+          <a href="#" class="work-card work-card-short">
+            <img src="images/work-5.jpg" alt="Topcon project" />
+            <div class="work-overlay"><div class="work-marquee">
+              <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
+              <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
+              <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
+            </div></div>
+            <span class="work-badge">Topcon</span>
           </a>
         </div>
         <div class="work-col work-col-right">
           <a href="#" class="work-card work-card-short">
-            <img src="images/work-2.jpg" alt="Specsavers project" />
+            <img src="images/work-2.jpg" alt="Topcon project" />
             <div class="work-overlay"><div class="work-marquee">
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
             </div></div>
-            <span class="work-badge">Specsavers</span>
+            <span class="work-badge">Topcon</span>
           </a>
           <a href="#" class="work-card work-card-short">
-            <img src="images/work-4.jpg" alt="Specsavers project" />
+            <img src="images/work-4.jpg" alt="Peldon Rose project" />
             <div class="work-overlay"><div class="work-marquee">
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
               <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
             </div></div>
-            <span class="work-badge">Specsavers</span>
+            <span class="work-badge">Peldon Rose</span>
+          </a>
+          <a href="#" class="work-card work-card-short">
+            <img src="images/work-6.jpg" alt="Topcon project" />
+            <div class="work-overlay"><div class="work-marquee">
+              <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
+              <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
+              <span class="marquee-text">View Project</span><span class="marquee-mark" aria-hidden="true"></span>
+            </div></div>
+            <span class="work-badge">Topcon</span>
           </a>
         </div>
       </div>
@@ -521,7 +511,7 @@
 
   </main>
 
-<!-- ============ FOOTER ============ -->
+ <!-- ============ FOOTER ============ -->
   <footer class="site-footer" id="siteFooter">
     <div class="footer-box" id="footerBox">
       <div class="footer-content">
@@ -565,179 +555,200 @@
     </div>
   </footer>
 
-  <!-- ============ SCRIPTS ============ -->
   <script>
-    const header = document.querySelector('.site-header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 8);
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  });
+
+  (function () {
+    const footer = document.getElementById('siteFooter');
+    const box = document.getElementById('footerBox');
+    if (!footer || !box) return;
+
+    function measure() {
+      box.style.transition = 'none';
+      box.style.width = '100%';
+      box.style.height = 'auto';
+      const h = box.offsetHeight;
+      box.style.width = '';
+      box.style.height = '';
+      void box.offsetWidth;
+      box.style.transition = '';
+      footer.style.setProperty('--footer-h', h + 'px');
+    }
+
+    measure();
+    window.addEventListener('load', measure);
+    window.addEventListener('resize', measure);
+
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => footer.classList.toggle('in-view', entry.isIntersecting));
+    }, { threshold: 0.25 }).observe(footer);
+  })();
+
+  (function () {
+    const toggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('menuClose');
+    if (!toggle || !menu || !closeBtn) return;
+
+    const panels = menu.querySelectorAll('.mm-panel');
+
+    function showPanel(name) {
+      panels.forEach(p => p.classList.toggle('is-active', p.dataset.panel === name));
+    }
+
+    function openMenu() {
+      showPanel('main');
+      menu.classList.add('is-open');
+      menu.setAttribute('aria-hidden', 'false');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
+    }
+
+    function closeMenu() {
+      menu.classList.remove('is-open');
+      menu.setAttribute('aria-hidden', 'true');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    }
+
+    toggle.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+
+    menu.querySelectorAll('[data-open]').forEach(btn => {
+      btn.addEventListener('click', () => showPanel(btn.dataset.open));
     });
 
-    (function () {
-      const footer = document.getElementById('siteFooter');
-      const box = document.getElementById('footerBox');
-      if (!footer || !box) return;
+    menu.querySelectorAll('.mm-back').forEach(btn => {
+      btn.addEventListener('click', () => showPanel('main'));
+    });
 
-      function measure() {
-        box.style.transition = 'none';
-        box.style.width = '100%';
-        box.style.height = 'auto';
-        const h = box.offsetHeight;
-        box.style.width = '';
-        box.style.height = '';
-        void box.offsetWidth;
-        box.style.transition = '';
-        footer.style.setProperty('--footer-h', h + 'px');
-      }
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
-      measure();
-      window.addEventListener('load', measure);
-      window.addEventListener('resize', measure);
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
+    });
 
-      new IntersectionObserver((entries) => {
-        entries.forEach(entry => footer.classList.toggle('in-view', entry.isIntersecting));
-      }, { threshold: 0.25 }).observe(footer);
-    })();
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024) closeMenu();
+    });
+  })();
 
-    (function () {
-      const toggle = document.getElementById('menuToggle');
-      const menu = document.getElementById('mobileMenu');
-      const closeBtn = document.getElementById('menuClose');
-      if (!toggle || !menu || !closeBtn) return;
+  // PR Intro Scroll Reveal
+  (function() {
+    const prIntro = document.getElementById('prIntro');
+    if (!prIntro) return;
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => entry.target.classList.toggle('is-visible', entry.isIntersecting));
+    }, { threshold: 0.15, rootMargin: "-5% 0px -10% 0px" }).observe(prIntro);
+  })();
 
-      const panels = menu.querySelectorAll('.mm-panel');
+  // Awards reveal
+  (function() {
+    const awards = document.querySelector('.awards');
+    if (!awards) return;
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => entry.target.classList.toggle('in-view', entry.isIntersecting));
+    }, { threshold: 0.15 }).observe(awards);
+  })();
 
-      function showPanel(name) {
-        panels.forEach(p => p.classList.toggle('is-active', p.dataset.panel === name));
-      }
+  // Testimonial slider
+  (function () {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.getElementById('testimonialPrev');
+    const nextBtn = document.getElementById('testimonialNext');
+    if (!slides.length || !prevBtn || !nextBtn) return;
 
-      function openMenu() {
-        showPanel('main');
-        menu.classList.add('is-open');
-        menu.setAttribute('aria-hidden', 'false');
-        toggle.setAttribute('aria-expanded', 'true');
-        document.body.classList.add('menu-open');
-      }
+    let current = 0;
+    const total = slides.length;
 
-      function closeMenu() {
-        menu.classList.remove('is-open');
-        menu.setAttribute('aria-hidden', 'true');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('menu-open');
-      }
-
-      toggle.addEventListener('click', openMenu);
-      closeBtn.addEventListener('click', closeMenu);
-
-      menu.querySelectorAll('[data-open]').forEach(btn => {
-        btn.addEventListener('click', () => showPanel(btn.dataset.open));
+    function showSlide(index) {
+      current = (index + total) % total;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('is-active', i === current);
       });
+    }
 
-      menu.querySelectorAll('.mm-back').forEach(btn => {
-        btn.addEventListener('click', () => showPanel('main'));
-      });
+    showSlide(0);
 
-      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    prevBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      showSlide(current - 1);
+    });
 
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
-      });
+    nextBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      showSlide(current + 1);
+    });
+  })();
 
-      window.addEventListener('resize', () => {
-        if (window.innerWidth > 1024) closeMenu();
-      });
-    })();
-
-    // ---- PR Intro Scroll Reveal ----
-    (function() {
-      const prIntro = document.getElementById('prIntro');
-      if (!prIntro) return;
-      new IntersectionObserver((entries) => {
-        entries.forEach(entry => entry.target.classList.toggle('is-visible', entry.isIntersecting));
-      }, { threshold: 0.15, rootMargin: "-5% 0px -10% 0px" }).observe(prIntro);
-    })();
-
-    // ---- PR Moments Scroll Reveal ----
-    (function() {
-      const prMoments = document.getElementById('prMoments');
-      if (!prMoments) return;
-      new IntersectionObserver((entries) => {
-        entries.forEach(entry => entry.target.classList.toggle('is-visible', entry.isIntersecting));
-      }, { threshold: 0.15, rootMargin: "-5% 0px -10% 0px" }).observe(prMoments);
-    })();
-
-    // ---- Awards reveal ----
-    (function() {
-      const awards = document.querySelector('.awards');
-      if (!awards) return;
-      new IntersectionObserver((entries) => {
-        entries.forEach(entry => entry.target.classList.toggle('in-view', entry.isIntersecting));
-      }, { threshold: 0.15 }).observe(awards);
-    })();
-
-    // ---- Testimonial slider (working prev/next) ----
-    (function () {
-      const slides = document.querySelectorAll('.testimonial-slide');
-      const prevBtn = document.getElementById('testimonialPrev');
-      const nextBtn = document.getElementById('testimonialNext');
-      if (!slides.length || !prevBtn || !nextBtn) return;
-
-      let current = 0;
-      const total = slides.length;
-
-      function showSlide(index) {
-        current = (index + total) % total;
-        slides.forEach((slide, i) => {
-          slide.classList.toggle('is-active', i === current);
+  // Split text into animated words
+  (function () {
+    document.querySelectorAll('[data-split]').forEach(el => {
+      const step = parseFloat(el.dataset.split) || 1;
+      let i = 0;
+      const walk = (node) => {
+        Array.from(node.childNodes).forEach(n => {
+          if (n.nodeType === 3) {
+            const frag = document.createDocumentFragment();
+            n.textContent.split(/(\s+)/).forEach(part => {
+              if (!part) return;
+              if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+              const s = document.createElement('span');
+              s.style.setProperty('--d', Math.round(i++ * step * 10) / 10);
+              s.textContent = part;
+              frag.appendChild(s);
+            });
+            node.replaceChild(frag, n);
+          } else if (n.nodeType === 1 && n.tagName !== 'BR') walk(n);
         });
-      }
+      };
+      walk(el);
+    });
+  })();
 
-      showSlide(0);
+  // B2B hero video mute toggle
+  (function () {
+    const v = document.getElementById('b2bVideo');
+    const b = document.getElementById('b2bMute');
+    if (!v || !b) return;
+    b.addEventListener('click', () => {
+      v.muted = !v.muted;
+      b.classList.toggle('is-on', !v.muted);
+      if (!v.muted) v.play().catch(() => {});
+    });
+  })();
 
-      prevBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        showSlide(current - 1);
-      });
-
-      nextBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        showSlide(current + 1);
-      });
-    })();
-  
-    // ---- Split text into animated words (same spans/--d the PR page uses) ----
-    (function () {
-      document.querySelectorAll('[data-split]').forEach(el => {
-        const step = parseFloat(el.dataset.split) || 1;
-        let i = 0;
-        const walk = (node) => {
-          Array.from(node.childNodes).forEach(n => {
-            if (n.nodeType === 3) {
-              const frag = document.createDocumentFragment();
-              n.textContent.split(/(\s+)/).forEach(part => {
-                if (!part) return;
-                if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
-                const s = document.createElement('span');
-                s.style.setProperty('--d', Math.round(i++ * step * 10) / 10);
-                s.textContent = part;
-                frag.appendChild(s);
-              });
-              node.replaceChild(frag, n);
-            } else if (n.nodeType === 1 && n.tagName !== 'BR') walk(n);
-          });
-        };
-        walk(el);
-      });
-    })();
-
-    // ---- Partners reveal ----
-    (function () {
-      const el = document.getElementById('smPartners');
-      if (!el) return;
-      new IntersectionObserver((entries) => {
-        entries.forEach(e => e.target.classList.toggle('in-view', e.isIntersecting));
-      }, { threshold: 0.3 }).observe(el);
-    })();
-  </script>
+  // Crisis lab reveal (plays once, stays visible)
+  (function () {
+    const el = document.getElementById('crisis');
+    if (!el) return;
+    let done = false;
+    function play() {
+      if (done) return;
+      done = true;
+      el.classList.add('in-view', 'has-played');
+      window.removeEventListener('scroll', check);
+      window.removeEventListener('resize', check);
+    }
+    function check() {
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      if (r.top < vh * 0.75 && r.bottom > vh * 0.15) play();
+    }
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { play(); io.disconnect(); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -12% 0px' });
+      io.observe(el);
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check);
+    window.addEventListener('load', check);
+  })();
+</script>
 
 </body>
 
