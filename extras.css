@@ -1,0 +1,58 @@
+/* ==========================================================
+   EXTRAS — site-wide animation layer
+   ========================================================== */
+
+.x-progress {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, #e94b3c, #ff8a6b);
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    z-index: 400;
+    pointer-events: none;
+}
+
+/* ---- scroll reveal (opt-in via data-rv) ---- */
+[data-rv] {
+    opacity: 0;
+    translate: 0 44px;
+    transition:
+        opacity .55s ease var(--d, 0s),
+        translate .6s cubic-bezier(.22, 1, .36, 1) var(--d, 0s),
+        scale .6s cubic-bezier(.22, 1, .36, 1) var(--d, 0s);
+}
+[data-rv="left"]  { translate: -48px 0; }
+[data-rv="right"] { translate: 48px 0; }
+[data-rv="scale"] { translate: 0 24px; scale: .92; }
+[data-rv].in {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+}
+
+/* ---- word-by-word reveal ---- */
+[data-words] .w {
+    display: inline-block;
+    opacity: 0;
+    translate: 0 .5em;
+    transition:
+        opacity .45s ease calc(var(--w) * .03s),
+        translate .55s cubic-bezier(.22, 1, .36, 1) calc(var(--w) * .03s);
+}
+[data-words].in .w { opacity: 1; translate: 0 0; }
+p[data-words] .w { translate: 0 .3em; }
+
+.cta-button, .np-btn, .hero-pill, .job-cta, .blog-button,
+.partners-button, .recent-button, .attention-button {
+    will-change: translate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-rv], [data-words] .w {
+        opacity: 1 !important;
+        translate: none !important;
+        scale: none !important;
+        transition: none !important;
+    }
+}

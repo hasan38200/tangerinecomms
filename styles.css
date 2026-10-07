@@ -211,8 +211,6 @@ body {
   flex-direction: column;
 }
 
-
-
 .mega-list li {
   border-bottom: 2px solid var(--divider);
 }
@@ -2907,9 +2905,9 @@ body.menu-open {
   }
 
   /* Left-aligned button below the title — proper tap target */
-   .partners-button {
-    justify-self: start;   /* horizontal alignment in a grid */
-    width: fit-content;    /* shrink to its content, like desktop */
+  .partners-button {
+    justify-self: start;
+    width: fit-content;
   }
 
   .partners-track {
@@ -3005,7 +3003,7 @@ body.menu-open {
   .blog {
     padding: 20px 20px 60px;
     --gap: 20px;
-    --per: 2;              /* 2 cards visible on tablet */
+    --per: 2;
   }
 
   .blog-arrow {
@@ -3047,6 +3045,7 @@ body.menu-open {
     align-items: flex-start;
   }
 }
+
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .blog {
@@ -3130,7 +3129,6 @@ body.menu-open {
     font-size: 1rem;
   }
 
-  /* hero: taller frame so the headline fits */
   .hero {
     padding: 12px 16px 32px;
   }
@@ -3254,7 +3252,6 @@ body.menu-open {
     margin-bottom: 32px;
   }
 
-  /* blog */
   .blog {
     padding: 16px 16px 48px;
   }
@@ -3292,7 +3289,6 @@ body.menu-open {
     font-size: 1.2rem;
   }
 
-  /* footer */
   .site-footer {
     padding: 0 8px 8px;
   }
@@ -3363,7 +3359,6 @@ body.menu-open {
   --pad: clamp(16px, 2vw, 40px);
 }
 
-/* hero award laurels: 5 x 3 grid */
 .hero-awards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -3498,25 +3493,448 @@ body.menu-open {
 
 /* ---- mobile menu: never show a scrollbar ---- */
 .mm-panel {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .mm-panel::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* ---- three-line hamburger ---- */
 .menu-toggle {
-    gap: 5px;
+  gap: 5px;
 }
 
 .menu-toggle span {
-    width: 22px;
-    height: 2.5px;
+  width: 22px;
+  height: 2.5px;
 }
 
 @media (max-width: 600px) {
-    .menu-toggle { gap: 4px; }
-    .menu-toggle span { width: 20px; height: 2px; }
+  .menu-toggle {
+    gap: 4px;
+  }
+
+  .menu-toggle span {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+
+/* ==========================================================
+   24. NEWPAGES.CSS — Retriva page styles
+   (Appended at end so it overrides earlier rules cleanly.)
+   ========================================================== */
+
+.np-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.np-sec {
+  padding: 90px 0;
+}
+
+.np-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.np-h2 {
+  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 22px;
+  max-width: 900px;
+}
+
+.np-p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #333;
+  max-width: 780px;
+  margin-bottom: 16px;
+}
+
+.np-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-right: 14px;
+}
+
+/* ---- hero (blobs + animated logo) ---- */
+.np-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px 24px;
+}
+
+.np-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.np-blob.b1 {
+  width: 420px;
+  height: 420px;
+  background: #ffb4a2;
+  top: -100px;
+  left: -100px;
+}
+
+.np-blob.b2 {
+  width: 480px;
+  height: 480px;
+  background: #f9d29a;
+  bottom: -140px;
+  right: -120px;
+}
+
+.rt-logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: clamp(4rem, 14vw, 11rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--ink);
+  margin: 0;
+}
+
+.rt-logo span {
+  display: inline-block;
+  opacity: 0;
+  translate: 0 0.4em;
+  animation: rtLogoIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--i) * 0.08s + 0.15s);
+}
+
+@keyframes rtLogoIn {
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* ---- four-question list ---- */
+.rt-qs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+  margin-top: 40px;
+  max-width: 900px;
+}
+
+.rt-q {
+  display: flex;
+  align-items: baseline;
+  border-top: 1px solid #e4e0da;
+  padding-top: 18px;
+}
+
+.rt-q h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+/* ---- image wrapper ---- */
+.np-image {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f0eee9;
+  aspect-ratio: 16 / 9;
+}
+
+.np-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- three framework cards ---- */
+.rt-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.rt-card {
+  background: #f5f2ec;
+  border-radius: 22px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rt-ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.rt-card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.rt-card .sub {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.rt-card p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #333;
+}
+
+.rt-card ul {
+  list-style: none;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rt-card li {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #333;
+  padding-left: 18px;
+  position: relative;
+}
+
+.rt-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* ---- banner with typewriter search ---- */
+.rt-banner {
+  position: relative;
+  background: #0e0e0e;
+  color: #fff;
+  border-radius: 28px;
+  padding: 90px 60px;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.rt-banner h2 {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.rt-banner h2 strong {
+  font-weight: 800;
+}
+
+.rt-search {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 20px 28px;
+  max-width: 680px;
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 500;
+}
+
+.rt-search .glass {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.rt-search .caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--accent);
+  margin-left: 2px;
+  vertical-align: -0.15em;
+  animation: caretBlink 1s steps(1) infinite;
+}
+
+@keyframes caretBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.rt-cursor {
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  color: var(--accent);
+  transform: rotate(-8deg);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ---- CTA card ---- */
+.np-cta {
+  background: #f5f2ec;
+  border-radius: 24px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.np-cta h3 {
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  max-width: 700px;
+}
+
+.np-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: #fff;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.np-btn:hover {
+  background: transparent;
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+/* ---- note / report card ---- */
+.rt-note {
+  background: #141414;
+  color: #fff;
+  border-radius: 24px;
+  padding: 60px;
+}
+
+.rt-note p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 900px;
+  color: #eaeaea;
+}
+
+.rt-note .np-btn {
+  background: #fff;
+  border-color: #fff;
+  color: var(--ink);
+}
+
+.rt-note .np-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ============================================================
+   NEWPAGES — responsive
+   ============================================================ */
+@media (max-width: 900px) {
+  .np-wrap {
+    padding: 0 20px;
+  }
+
+  .np-sec {
+    padding: 60px 0;
+  }
+
+  .rt-qs {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .rt-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .rt-banner {
+    padding: 60px 24px;
+    border-radius: 22px;
+  }
+
+  .rt-search {
+    padding: 16px 22px;
+  }
+
+  .rt-cursor {
+    display: none;
+  }
+
+  .np-cta {
+    padding: 40px 24px;
+  }
+
+  .rt-note {
+    padding: 40px 24px;
+  }
 }
